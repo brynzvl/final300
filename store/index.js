@@ -5,6 +5,7 @@ const createStore = () => {
     state: {
       albums: []
     },
+    
     mutations: {
        add (state, payload) {
          state.albums = payload;

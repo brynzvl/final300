@@ -1,63 +1,46 @@
 <template>
-  <section class="container">
-    <div>
-      <ToolBar/>
-      <nuxt/>
+<div class="app-container">
+    <div class="grid-container">
+         <div class="container">
+             <img id="space" src="../../static/img/space.png" class="img-fluid" alt="Responsive image">
+             <div class="image-box">
+                <img v-for="image in images" v-bind:src="image.path" class="img-fluid" v-bind:key="image.alt" v-bind:alt="image.alt"> 
+            </div>
+         </div>
     </div>
-  </section>
+    </div>
 </template>
 
 <script>
-import ToolBar from '~/components/Toolbar.vue';
-export default {
-    components: {
-      ToolBar
+  export default {
+    data() {
+      return {  
+		    images: [
+                {path: require("../../static/img/traffic.jpg"), alt:"Traffic"}, 
+                {path: require("../../static/img/bridge.jpg"), alt:"Bridge"}, 
+                {path: require("../../static/img/tunnel.jpg"), alt:"Tunnel"}, 
+                {path: require("../../static/img/coast.jpg"), alt:"Coast"}, 
+                {path: require("../../static/img/sky.jpg"), alt:"Sky"}, 
+                {path: require("../../static/img/rails.jpg"), alt:"Rails"}, 
+            ]
+       }
     }
-}
+  }
 </script>
+
+
 <style>
-html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+.image-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.image-box img {
+    width: 350px;
+    max-width: 100%;
+    max-height: 350px;
+    margin: 8px;
+    border-radius: 8px;
 }
 
-*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
 </style>

@@ -1,9 +1,8 @@
-
-
 <template>
+  <div class="accordion-container">
 
-  <div>
-    <b-card no-body class="mb-1" v-for="data in accordionData" v-bind:key="data.title">
+          <!-- bootstrap accordion component -->
+    <b-card no-body class="mb-1 accordion" v-for="data in accordionData" v-bind:key="data.title">
       <b-card-header header-tag="header" class="p-1" role="tab">
         <b-button block href="#" v-b-toggle.accordion-1 variant="info">{{data.title}}</b-button>
       </b-card-header>
@@ -29,3 +28,15 @@
     }
   }
 </script>
+
+<style>
+  .accordion {
+    max-width: 400px;
+    margin:   auto;
+
+  }
+  .accordion-container {
+    padding: 4rem 0 0 0 ;
+  }
+  
+</style>

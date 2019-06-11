@@ -4,18 +4,17 @@
   "description": "My praiseworthy Nuxt.js project",
   "author": "Brayan Zavala",
   "private": true,
-
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "deploy": "push-dir --dir=dist --branch=master --cleanup"
-
   },
   "dependencies": {
     "@nuxtjs/vuetify": "0.5.5",
     "axios": "^0.19.0",
+    "bootstrap-vue": "^2.0.0-rc.22",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {

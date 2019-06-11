@@ -40,6 +40,7 @@ export default {
   */
   modules: [
     '@nuxtjs/vuetify',
+    'bootstrap-vue/nuxt',
   ],
   /*
   ** vuetify module configuration

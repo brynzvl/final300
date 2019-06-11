@@ -8,6 +8,9 @@
 <script>
 import ToolBar from '~/components/Toolbar.vue';
 
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 export default {
   components: {
     ToolBar
@@ -44,7 +47,7 @@ export default {
     /* Rectangle: */
     background-image: linear-gradient(-180deg, #0B84A9 0%, #054C70 100%);
     min-height: 100vh;
-      font-family: WorkSans-Medium;
+    font-family: WorkSans-Medium;
 
   }
 

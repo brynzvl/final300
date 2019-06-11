@@ -18,7 +18,6 @@ export default {
 
 <style>
   .v-card {
-    /* display: inline-flex; */
     max-width: 100px;
     margin-bottom: 16px;
     
