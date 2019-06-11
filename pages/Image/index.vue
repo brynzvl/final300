@@ -4,7 +4,7 @@
          <div class="container">
              <img id="space" src="../../static/img/space.png" class="img-fluid" alt="Responsive image">
              <div class="image-box">
-                <img v-for="image in images" v-bind:src="image.path" class="img-fluid" v-bind:key="image.alt" v-bind:alt="image.alt"> 
+                <b-img v-for="image in images" v-bind:src="image.path" class="img-fluid" v-bind:key="image.alt" v-bind:alt="image.alt"> </b-img>
             </div>
          </div>
     </div>

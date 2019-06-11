@@ -4,7 +4,7 @@
           <!-- bootstrap accordion component -->
     <b-card no-body class="mb-1 accordion" v-for="data in accordionData" v-bind:key="data.title">
       <b-card-header header-tag="header" class="p-1" role="tab">
-        <b-button block href="#" v-b-toggle.accordion-1 variant="info">{{data.title}}</b-button>
+        <b-button block class="bbutton" href="#" v-b-toggle.accordion-1 variant="info">{{data.title}}</b-button>
       </b-card-header>
       <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
         <b-card-body>
@@ -37,6 +37,10 @@
   }
   .accordion-container {
     padding: 4rem 0 0 0 ;
+  }
+
+  .bbutton {
+    background-color: #0a749a;
   }
   
 </style>
